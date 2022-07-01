@@ -10,9 +10,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       
-      - name: Dispatch sync
+      - name: Dispatch sync # Signal to main repository to sync with this one
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           repository: Astrashh/ConfigPackAutomation
-          event-type: sync-submodules
+          event-type: Sync Images
